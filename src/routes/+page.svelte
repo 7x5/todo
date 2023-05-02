@@ -1,15 +1,19 @@
 <script>
-    import { each, text } from "svelte/internal";
+    import { each, onMount, text } from "svelte/internal";
 
     let todo = [
     { done: false, name: 'Fix the todo app' },
     { done: false, name: 'CSS' },
     { done: false, name: 'Present' }
     ];
-    let item;
+    onMount(() => {
+        const existingTodo = localStorage.getItem('todo');
+        todo = JSON.parse(existingTodo) || [];
+    });
+
     function addItem() {
         todo = todo.concat({ done: false, name: '' });
-        console.log(todo)
+        localStorage.setItem('todo', JSON.stringify(todo));
     }
     function removeItem() {
         todo = todo.filter(i => !i.done)
