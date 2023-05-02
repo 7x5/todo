@@ -35,10 +35,16 @@
         margin-bottom: 5px;
         margin-right: 5px;
         background-color: red;
-        border: 0px;
+        border: 1px solid black;
         border-radius: 5px;
         box-shadow:  3px 3px 0px -1px rgba(0, 0, 0, 0.81);
 -webkit-box-shadow:  3px 3px 0px -1px rgba(0, 0, 0, 0.81);
+    }
+
+    .btn:active {
+        margin-top: 2px;
+        box-shadow:  0px 0px 0px -1px rgba(0, 0, 0, 0.81);
+-webkit-box-shadow:  0px 0px 0px -1px rgba(0, 0, 0, 0.81);
     }
 
     .inp {
@@ -52,9 +58,15 @@
 
     .submit {
         background-color: #00cc00;
-        border: 0px;
+        border: 1px solid black;
         border-radius: 5px;
         box-shadow:  3px 3px 0px -1px rgba(0, 0, 0, 0.81);
 -webkit-box-shadow:  3px 3px 0px -1px rgba(0, 0, 0, 0.81);
+    }
+
+    .submit:active {
+        margin-top: 3px;
+        box-shadow:  0px 0px 0px -1px rgba(0, 0, 0, 0.81);
+-webkit-box-shadow:  0px 0px 0px -1px rgba(0, 0, 0, 0.81);
     }
 </style>
