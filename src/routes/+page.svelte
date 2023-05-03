@@ -31,7 +31,13 @@
     {#each todo as object}
     <div style=display:flex;>
             <button class="btn" on:click="{object.done = !object.done }" on:click="{removeItem}">X</button> 
-            <input on:keydown={save} class="inp" placeholder="Add TODO here" value={object.name}>
+            <input class="inp" placeholder="Add TODO here" value={object.name}>
+            <select>
+                <option value="- SELECT PRIORITY -">- SELECT PRIORITY -</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
     </div>
     {/each}
     <br>
